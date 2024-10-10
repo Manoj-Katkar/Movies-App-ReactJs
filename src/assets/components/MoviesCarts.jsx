@@ -3,7 +3,7 @@ import React from 'react'
 const MoviesCarts = ({currentMovie , uniqueKey , addToWatchlist , removeFromWatchlist,  isAddedToWatchList}) => {
   return (
     <div key={uniqueKey}
-    className="h-[40vh] w-[200px] bg-center bg-cover rounded-xl hover:scale-110 transition-transform duration-700 cursor-pointer flex flex-col justify-end relative"
+    className="h-[50vh] w-[240px] bg-center bg-cover rounded-xl hover:scale-110 transition-transform duration-700 cursor-pointer flex flex-col justify-end relative my-4"
     style={{
       backgroundImage : `url(https://image.tmdb.org/t/p/original${currentMovie.poster_path})`
     }}
@@ -20,7 +20,7 @@ const MoviesCarts = ({currentMovie , uniqueKey , addToWatchlist , removeFromWatc
         onClick={() => {
           removeFromWatchlist(currentMovie)
         }}
-        className='m-4 flex justify-center h-8 w-8 items-center rounded-g bg-gray-900/60 absolute top-0 left-32'>
+        className='m-4 flex justify-center h-8 w-8 items-center rounded-g bg-gray-900/60 absolute top-0 left-44'>
           ❌
         </div>
       :
@@ -28,7 +28,7 @@ const MoviesCarts = ({currentMovie , uniqueKey , addToWatchlist , removeFromWatc
         onClick={() => {
           addToWatchlist(currentMovie)
         }}
-        className='m-4 flex justify-center h-8 w-8 items-center rounded-g bg-gray-900/60 absolute top-0 left-32'>
+        className='m-4 flex justify-center h-8 w-8 items-center rounded-g bg-gray-900/60 absolute top-0 left-44'>
           ❤
         </div>
       

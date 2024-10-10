@@ -50,10 +50,11 @@ const Banner = () => {
             backgroundImage : `url(${bannerImage})`,
             backgroundSize: 'cover', // Optional: Adjusts the size of the background image
             backgroundPosition: 'center', // Optional: Centers the background image
+            padding:"1rem"
         }}
     >
         <div
-                className='text-white w-full text-center text-2xl'
+                className='text-white w-full text-center text-2xl animate-highlight'
         >
             {title}
         </div>

@@ -9,6 +9,7 @@ import { Routes , Route} from 'react-router-dom'
 import MovieContextProvider from './Context/MovieContextProvider'
 
 
+
 function App() {
 
   // !here for all I have to make the parent as the MovieContextProvider because it is providing the Context to consume to all I have to make all other components as the child of it then only they Can able to access the all the global state and it will solve the below issues reduce the code redundancy , state management , solve props drilling issue 
@@ -20,7 +21,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/watchlist' element={<Watchlist/>}></Route>
-        
       </Routes>
 {/* 
       <Home/>

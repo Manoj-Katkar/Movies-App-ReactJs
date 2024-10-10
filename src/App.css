@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,21 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+
+
+/* !Animation for the Trending Movie Name */
+@keyframes highlight {
+  0% { color: #FF0000; }  /* Red */
+  20% { color: #FF7F00; } /* Orange */
+  40% { color: #FFFF00; } /* Yellow */
+  60% { color: #00FF00; } /* Green */
+  80% { color: #0000FF; } /* Blue */
+  100% { color: #4B0082; } /* Indigo */
 }
+
+.animate-highlight {
+  animation: highlight 2s linear infinite; /* Change the duration and timing function as needed */
+}
+

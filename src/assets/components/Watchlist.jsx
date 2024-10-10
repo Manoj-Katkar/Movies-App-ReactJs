@@ -178,6 +178,13 @@ const Watchlist = () => {
 
   // !NOw I have to chnage the Genre of the each movie with its proper Name and that I have to render it in the UI 
 
+    // !Function to handle deleting a movie from the watchlist
+    const handleDelete = (movieId) => {
+      const updatedWatchlist = watchlistArray.filter(movie => movie.id !== movieId);
+      setWatchlistArray(updatedWatchlist);
+      localStorage.setItem("watchlistArray", JSON.stringify(updatedWatchlist));
+    };
+
 
 
 
@@ -305,6 +312,15 @@ const Watchlist = () => {
                     <td className='px-6 py-4 text-gray-700'>{currentFavMovie.vote_average}</td>
                     <td className='px-6 py-4 text-gray-700'>{currentFavMovie.popularity}</td>
                     <td className='px-6 py-4 text-gray-700'>{genreNames}</td>
+                    <td className='px-6 py-4'>
+
+                    <button
+                      className="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none transition duration-300"
+                      onClick={() => handleDelete(currentFavMovie.id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
                   </tr>
                 );
               })
