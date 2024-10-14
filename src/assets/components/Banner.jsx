@@ -51,6 +51,7 @@ const Banner = () => {
             backgroundSize: 'cover', // Optional: Adjusts the size of the background image
             backgroundPosition: 'center', // Optional: Centers the background image
             padding:"1rem"
+
         }}
     >
         <div

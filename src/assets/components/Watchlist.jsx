@@ -152,7 +152,7 @@ const Watchlist = () => {
 
   // !writing the filter function according to the user input text that I have stored in the one state that is searchText
 
-  const filterWatchListMovies = () => {
+  const filterWatchListMovies = (event) => {
     const copyOfWatchList = [...watchlistArray];
 
     let filteredSearchMovies = copyOfWatchList.filter((currenMovie , Index) => {
@@ -233,7 +233,7 @@ const Watchlist = () => {
       
 
       <button
-        className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out m-2"
+        className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out m-2 active:bg-red-500 cursor-pointer"
         onClick={filterWatchListMovies}
       >
         Search
@@ -243,11 +243,11 @@ const Watchlist = () => {
     </div>
 
     <div className='overflow-hidden rounded-lg border border-gray-200 shadow-md m-5'>
-    <table className='w-full border-collapse bg-white text-left text-sm text-gray-500'>
+    <table className='min-w-full border-collapse bg-white text-left text-sm text-gray-500'>
       <thead>
         <tr className='bg-gray-50'>
-          <th className='px-6 py-4 font-medium text-gray-900'>Name</th>
-          <th className='px-6 py-4 font-medium text-gray-900'>
+          <th className='px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-900 text-xs sm:text-base'>Name</th>
+          <th className='px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-900 text-xs sm:text-base'>
                 <i className="fa-solid fa-arrow-up m-1 transform transition-transform duration-300 hover:scale-125 hover:text-blue-500 active:scale-150"
                   onClick={handleDescendingRatings}
                   title='Top Rated First'>
@@ -261,8 +261,8 @@ const Watchlist = () => {
                 </i>
 
             </th> 
-          <th className='px-6 py-4 font-medium text-gray-900'>Popularity</th>
-          <th className='px-6 py-4 font-medium text-gray-900'>Genre</th>
+          <th className='px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-900 text-xs sm:text-base'>Popularity</th>
+          <th className='px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-900 text-xs sm:text-base'>Genre</th>
         </tr>
       </thead>
 
@@ -301,21 +301,21 @@ const Watchlist = () => {
 
                 return (
                   <tr key={index} className="hover:bg-gray-50 transition-all">
-                    <td className='px-6 py-4 flex items-center space-x-4'>
+                    <td className='px-2 py-2 sm:px-6 sm:py-4 flex items-center space-x-2 sm:space-x-4'>
                       <img
-                        className="w-12 h-18 rounded-md shadow-md"
+                        className="w-8 h-12 sm:w-12 sm:h-18 rounded-md shadow-md"
                         src={`https://image.tmdb.org/t/p/original${currentFavMovie.poster_path}`}
                         alt={currentFavMovie.title}
                       />
-                      <div className="text-gray-900 font-semibold">{currentFavMovie.title}</div>
+                      <div className="text-gray-900 font-semibold text-xs sm:text-base">{currentFavMovie.title}</div>
                     </td>
-                    <td className='px-6 py-4 text-gray-700'>{currentFavMovie.vote_average}</td>
-                    <td className='px-6 py-4 text-gray-700'>{currentFavMovie.popularity}</td>
-                    <td className='px-6 py-4 text-gray-700'>{genreNames}</td>
-                    <td className='px-6 py-4'>
+                    <td className='px-2 py-2 sm:px-6 sm:py-4 text-gray-700 text-xs sm:text-base'>{currentFavMovie.vote_average}</td>
+                    <td className='px-2 py-2 sm:px-6 sm:py-4 text-gray-700 text-xs sm:text-base'>{currentFavMovie.popularity}</td>
+                    <td className='px-2 py-2 sm:px-6 sm:py-4 text-gray-700 text-xs sm:text-base'>{genreNames}</td>
+                    <td className='px-2 py-2 sm:px-6 sm:py-4'>
 
                     <button
-                      className="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none transition duration-300"
+                      className="px-2 py-1 sm:px-4 sm:py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none transition duration-300 text-xs sm:text-base"
                       onClick={() => handleDelete(currentFavMovie.id)}
                     >
                       Delete
