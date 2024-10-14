@@ -27,6 +27,15 @@ function App() {
       <Watchlist/>
       <NavBar/> */}
 
+      {/* Note : React is the single page application I have implemented the client side routing but but when user is clicking on watchlist at that time react knows what it should show but when I do re-fresh and then it is not working because at that time I am asking to server but server does not know where is watchlist so for that I have to re-direct the server to my react application so the react application will handle it 
+      
+      To resolve the above issue : 
+                  i)step 1 : in public folder I will create the one file name as _redirects
+                  ii) then in that file I have to write the below code (start means any route)
+                  iii) code => 
+                            /* /index.html 200        (means redirect to my react application )
+      */}
+
     </MovieContextProvider>
   )
 }
