@@ -159,7 +159,9 @@ const Movies = () => {
 
   if(error){
     return (
-      <h1>Something went wrong Error</h1>
+      <h1>Something went wrong Please set the following DNS for the API to work on your device: <br />
+
+      Primary DNS: 8.8.8.8 (Google) or 1.1.1.1 (Cloudflare) Secondary DNS (Optional): 8.8.4.4 (Google) or 1.0.0.1 (Cloudflare)</h1>
     )
   }
 

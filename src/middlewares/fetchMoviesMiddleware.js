@@ -8,7 +8,8 @@ const fetchMoviesMiddleware = (pageNo) => {
     return async (dispatch) => {
         
         try{
-            // first I have to make the loading as true so first I have to dispatch that thing 
+            // first I have to make the loading as true so first I have to dispatch that thing
+            
             dispatch(actions.moviesLoading());
 
             //&then now I have to fetch the all the movies 
@@ -41,3 +42,4 @@ const fetchMoviesMiddleware = (pageNo) => {
 }
 
 export default fetchMoviesMiddleware
+
